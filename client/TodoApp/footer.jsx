@@ -3,6 +3,10 @@ TodoFooter = React.createClass({
 		var activeTodoWord = 'items';
 		var clearButton = null;
 
+		if(this.props.count == 1) {
+			activeTodoWord = 'item';
+		}
+
 		if (this.props.completedCount > 0) {
 			clearButton = (
 				<button

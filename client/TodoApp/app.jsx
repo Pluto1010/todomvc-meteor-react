@@ -105,12 +105,12 @@ TodoApp = React.createClass({
 
 			var shownTodos = todos.filter(function (todo) {
 				switch (this.state.nowShowing) {
-				case app.ACTIVE_TODOS:
-					return !todo.completed;
-				case app.COMPLETED_TODOS:
-					return todo.completed;
-				default:
-					return true;
+					case app.ACTIVE_TODOS:
+						return !todo.completed;
+					case app.COMPLETED_TODOS:
+						return todo.completed;
+					default:
+						return true;
 				}
 			}, this);
 
